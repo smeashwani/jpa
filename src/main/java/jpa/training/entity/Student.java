@@ -32,6 +32,11 @@ public class Student {
 		this.fees = fees;
 		this.age = age;
 	}
+	
+	public Student(int id, String name, int fees, int age) {
+		this(name, fees, age);
+		this.id=id;
+	}
 
 	@Override
 	public String toString() {

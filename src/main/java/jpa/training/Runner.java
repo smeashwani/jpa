@@ -10,12 +10,10 @@ public class Runner {
 	
 	public static void main(String[] args) {
 		save();
-		//stuRepo.findAndUpdate(1);
-		stuRepo.findAndDelete(3);
-		//System.out.println("Operation completed");
-		
-		List<Student> findAll = stuRepo.findAll();
+		List<Student> findAll = stuRepo.findByCriteria();
 		findAll.forEach(System.out::println);
+		System.out.println("Operation completed");
+		
 	}
 
 	private static void save() {
