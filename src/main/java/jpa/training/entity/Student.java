@@ -1,10 +1,12 @@
 package jpa.training.entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Student {
@@ -22,6 +24,17 @@ public class Student {
 	@Column(name="s_age")
 	private int age;
 	
+	@OneToOne(cascade=CascadeType.ALL)
+	Address address;
+	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	public Student() {
 		super();
 	}
