@@ -12,7 +12,7 @@ public class Runner {
 		save();
 		//stuRepo.findAndUpdate(1);
 		stuRepo.findAndDelete(3);
-		//System.out.println("Operation completed");
+		System.out.println("Operation completed");
 		
 		List<Student> findAll = stuRepo.findAll();
 		findAll.forEach(System.out::println);
